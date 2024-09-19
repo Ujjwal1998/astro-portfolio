@@ -1,0 +1,191 @@
+---
+import { info } from "../../data/info";
+
+const { title, description } = Astro.props;
+console.log(title, description);
+---
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
+
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+{
+  title && (
+    <link rel="canonical" href={`${info.baseUrl}${Astro.url.pathname}`} />
+  )
+}
+{title && <title>{`${title} - ${info.name}`}</title>}
+{title && <meta name="title" content={`${title} - ${info.name}`} />}
+{description && <meta name="description" content={description} />}
+
+<!-- Open Graph / Facebook -->
+{title && <meta property="og:type" content="website" />}
+{
+  title && (
+    <meta property="og:url" content={`${info.baseUrl}${Astro.url.pathname}`} />
+  )
+}
+{title && <meta property="og:title" content={`${title} - ${info.name}`} />}
+{description && <meta property="og:description" content={description} />}
+
+<!-- Twitter -->
+{title && <meta property="twitter:card" content="summary_large_image" />}
+{
+  title && (
+    <meta
+      property="twitter:url"
+      content={`${info.baseUrl}${Astro.url.pathname}`}
+    />
+  )
+}
+{title && <meta property="twitter:title" content={`${title} - ${info.name}`} />}
+{description && <meta property="twitter:description" content={description} />}
+
+<!-- preload assests -->
+<link
+  rel="preload"
+  href="/assets/fonts/Montserrat/Montserrat-Light.ttf"
+  as="font"
+  crossorigin
+/>
+<!-- HTML markup -->
+<header
+  class="container relative z-20 flex h-[80px] items-center justify-between bg-inherit sm:h-[123px]"
+>
+  <a
+    href="/"
+    class="font-outfit text-2xl font-semibold dark:font-semibold dark:text-light"
+    >MY LOGO</a
+  >
+  <nav>
+    <ul class="flex items-center">
+      {
+        info.pages.map((page) => (
+          <li>
+            <a
+              href={`/${page}`}
+              class="dark:text-light hidden p-4 text-lg sm:block"
+            >
+              {page.charAt(0).toLowerCase() + page.slice(1)}
+            </a>
+          </li>
+        ))
+      }
+      <li>
+        <button
+          aria-label="theme-button"
+          id="theme-button"
+          class="ml-2 rounded-lg bg-slate-200 p-4 dark:bg-[#202020] dark:text-light"
+        ></button>
+      </li>
+      <li>
+        <button
+          aria-label="mobile-menu-button"
+          id="mobile-menu-button"
+          class="ml-2 block rounded-lg bg-slate-200 p-4 text-lg dark:bg-[#202020] dark:text-light sm:hidden"
+        >
+          <svg
+            id="mobile-menu-button-expand"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-menu"
+            ><line x1="3" y1="12" x2="21" y2="12"></line><line
+              x1="3"
+              y1="6"
+              x2="21"
+              y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg
+          >
+          <svg
+            id="mobile-menu-button-collapse"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-x hidden"
+            ><line x1="18" y1="6" x2="6" y2="18"></line><line
+              x1="6"
+              y1="6"
+              x2="18"
+              y2="18"></line></svg
+          >
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const moon = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+  const sun = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+  const themeButton = document.getElementById("theme-button");
+  const browserTheme = document.querySelector(
+    '[name="theme-color"]'
+  ) as HTMLMetaElement;
+  console.log(browserTheme);
+  let isDark;
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+    isDark = true;
+    themeButton.innerHTML = moon;
+    browserTheme.content = "#FFFFFF";
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    isDark = false;
+    themeButton.innerHTML = sun;
+    browserTheme.content = "#111111";
+  }
+  window.localStorage.setItem("theme", theme);
+
+  const darkModeHandler = () => {
+    if (isDark) {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.theme = "dark";
+      isDark = false;
+      themeButton.innerHTML = sun;
+      browserTheme.content = "#111111";
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.theme = "light";
+      isDark = true;
+      themeButton.innerHTML = moon;
+      browserTheme.content = "#FFFFFF";
+    }
+  };
+
+  themeButton.addEventListener("click", darkModeHandler);
+</script>
