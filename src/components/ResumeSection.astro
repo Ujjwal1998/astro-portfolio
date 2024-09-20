@@ -1,5 +1,7 @@
 ---
 const { title, details } = Astro.props;
+// console.log(details, "DETAIOL");
+// details.map((item) => item.map((item) => console.log(item)));
 ---
 
 <section>
@@ -24,11 +26,17 @@ const { title, details } = Astro.props;
               {item.location}
             </p>
             <ul class="mt-3 ml-6 xl:ml-0">
-              {item.description.map((item) => (
-                <li class="dark:text-light mb-2 list-disc">
-                  <div>{item}</div>
-                </li>
-              ))}
+              {item.description.map((point, idx) => {
+                console.log(item.description.length);
+                return idx === item.description.length - 1 &&
+                  title === "Experience" ? (
+                  <li class="dark:text-light mb-2 list-disc underline">
+                    <div>{point}</div>
+                  </li>
+                ) : (
+                  <li class="dark:text-light mb-2 list-disc">{point}</li>
+                );
+              })}
             </ul>
           </div>
         ))
