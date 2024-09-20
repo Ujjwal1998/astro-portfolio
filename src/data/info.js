@@ -11,27 +11,31 @@ const yearsOfItExperience = getYearsSinceDate(new Date("2006"));
 export const info = {
   baseUrl: "https://ujjwaltalwar.com/",
   ogImageUrl: "/android-chrome-512x512.png",
-  resumeUrl: "assets/resume/Dennis Drueck Resume.pdf",
+  resumeUrl: "assets/resume/Ujjwal Talwar Resume.pdf",
   pages: ["about", "contact", "projects"],
   metaDescriptions: {
-    home: "I'm Dennis Drueck, a full-stack developer based in Naperville, Illinois.",
+    home: "I'm Ujjwal Talwar, a full-stack developer based in New Delhi, India.",
     about: "My bio is available on this page.",
     contact: "My contact details are available on this page.",
     projects: "My projects are available in this page.",
   },
   name: "Ujjwal Talwar",
   jobDescription: "Full-Stack Developer",
-  email: "Denwa.dev@gmail.com",
+  email: "ujjwaltalwar2021@gmail.com",
   socialMedia: {
-    github: "https://github.com/d5732",
-    email: "Denwa.dev@gmail.com",
-    linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
+    github: "https://github.com/Ujjwal1998",
+    email: "ujjwaltalwar2021@gmail.com",
+    linkedin: "https://www.linkedin.com/in/ujjwal-talwar-80a171179/",
   },
-  summary: [
-    `I'm a software engineer based in Naperville, Illinois. With ${yearsOfSoftwareDevelopmentExperience} years of software development experience and ${yearsOfItExperience} years in IT, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.`,
-    "I've created pragmatic solutions to numerous complex problems, prioritizing scalability and engineering efficiency. Currently, I'm improving data integrity in Tempus AI's DNA sequencing pipeline, streamlining complex data processing.",
-    "My commitment to continuous learning and growth empowers me to tackle increasingly challenging issues and deliver high-impact solutions.",
-  ],
+  hero: {
+    name: "Ujjwal Talwar",
+    subText: "Hello, I am",
+    summary: [
+      `I'm a software engineer based in New Delhi, India. With ${yearsOfSoftwareDevelopmentExperience} years of software development experience and ${yearsOfItExperience} years in IT, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.`,
+      "I've created pragmatic solutions to numerous complex problems, prioritizing scalability and engineering efficiency. Currently, I'm improving data integrity in Tempus AI's DNA sequencing pipeline, streamlining complex data processing.",
+      "My commitment to continuous learning and growth empowers me to tackle increasingly challenging issues and deliver high-impact solutions.",
+    ],
+  },
   about: [
     `I've developed software professionally for the past ${yearsOfSoftwareDevelopmentExperience} years, and have more than ${yearsOfItExperience} years of IT experience overall. I've been privileged to work with some awesome companies like Tesla, E. & J. Gallo Winery, as well as some really cool startups.`,
     "Growing up in the Chicago area, my family owned and operated one of the largest suppliers of Camaro parts in the United States, which gave me early insight into the intersection of business and technology.",

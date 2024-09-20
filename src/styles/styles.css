@@ -33,7 +33,7 @@
   p,
   li,
   a {
-    @apply font-montserrat text-dark-gray;
+    @apply font-montserrat text-dark;
   }
   #mobile-menu-nav {
     @apply bg-gradient-to-b from-light-transparent  dark:from-dark-transparent;

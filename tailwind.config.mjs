@@ -14,7 +14,7 @@ export default {
         "dark-gray": "#1A1A1A",
       },
       fontFamily: {
-        montserrat: ["Montsserrat", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },

@@ -3,12 +3,17 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { info } from "../data/info";
 import Header from "../components/general/Header.astro";
+import Hero from "../components/Hero.astro";
+import ResumeSection from "../components/ResumeSection.astro";
 ---
 
 <!doctype html>
 <html lang="en">
   <head><Header title="Portfolio" description="Desc" /> </head>
   <body>
-    <Layout />
+    <Layout>
+      <Hero />
+      <ResumeSection title="Experience" details={info.experience} />
+    </Layout>
   </body>
 </html>
