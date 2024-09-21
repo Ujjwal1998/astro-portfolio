@@ -11,7 +11,7 @@ const yearsOfItExperience = getYearsSinceDate(new Date("2006"));
 export const info = {
   baseUrl: "https://ujjwaltalwar.com/",
   ogImageUrl: "/android-chrome-512x512.png",
-  resumeUrl: "assets/resume/Ujjwal Talwar Resume.pdf",
+  resumeUrl: "assets/resume/ujjwaltalwar-resume.pdf",
   pages: ["about", "contact", "projects"],
   metaDescriptions: {
     home: "I'm Ujjwal Talwar, a full-stack developer based in New Delhi, India.",
@@ -64,7 +64,7 @@ export const info = {
     {
       title: "Consulting Engineer (Automation and Security)",
       name: "Cisco Systems Inc.",
-      location: "Bangalore",
+      location: "Bangalore, India",
       startDate: "08/2020",
       endDate: "01/2023",
       description: [
@@ -81,7 +81,7 @@ export const info = {
     {
       title: "Bachelor of Technology (Computer Science)",
       name: "Amity University",
-      location: "Noida, Uttar Pradesh, India",
+      location: "Uttar Pradesh, India",
       startDate: "08/2016",
       endDate: "05/2020",
       description: [
@@ -92,18 +92,18 @@ export const info = {
 
   certifications: [
     {
-      title: "FreeCodeCamp.org",
-      location: "San Francisco, CA",
-      startDate: "06/2021",
-      endDate: "12/2022",
-      description: [
-        "Back-End and APIs — Express.js, MongoDB, Node.js",
-        "Relational Databases — PostgreSQL, Bash",
-        "Front-End Libraries — React.js, Redux, jQuery, Bootstrap",
-        "JavaScript — Data Structures and Algorithms",
-        "Python — Scientific Computing",
-        "Responsive Web Design — Semantic HTML5, CSS3",
-      ],
+      title: "Cisco Certified Network Associate (CCNA)",
+      location: "",
+      startDate: "",
+      endDate: "",
+      description: [],
+    },
+    {
+      title: "Cisco Certified Developer Associate (DevNet Associate)",
+      location: "",
+      startDate: "",
+      endDate: "",
+      description: [],
     },
   ],
   projects: [

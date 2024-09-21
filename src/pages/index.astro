@@ -13,8 +13,11 @@ import ResumeSection from "../components/ResumeSection.astro";
   <body>
     <Layout>
       <Hero />
-      <ResumeSection title="Experience" details={info.experience} />
-      <ResumeSection title="Education" details={info.education} />
+      <section class="mt-10">
+        <ResumeSection title="Experience" details={info.experience} />
+        <ResumeSection title="Education" details={info.education} />
+        <ResumeSection title="Certifications" details={info.certifications} />
+      </section>
     </Layout>
   </body>
 </html>
