@@ -27,14 +27,12 @@ const { title, details } = Astro.props;
             </p>
             <ul class="mt-3 ml-6 xl:ml-0">
               {item.description.map((point, idx) => {
-                console.log(item.description.length);
-                return idx === item.description.length - 1 &&
-                  title === "Experience" ? (
-                  <li class="dark:text-light mb-2 list-disc underline">
+                return (
+                  <li
+                    class={`dark:text-light mb-2 list-disc ${idx === item.description.length - 1 ? "underline" : ""}`}
+                  >
                     <div>{point}</div>
                   </li>
-                ) : (
-                  <li class="dark:text-light mb-2 list-disc">{point}</li>
                 );
               })}
             </ul>
