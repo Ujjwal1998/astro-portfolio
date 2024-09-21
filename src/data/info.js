@@ -4,7 +4,7 @@ function getYearsSinceDate(date) {
 }
 
 const yearsOfSoftwareDevelopmentExperience = getYearsSinceDate(
-  new Date("2019")
+  new Date("2020")
 );
 const yearsOfItExperience = getYearsSinceDate(new Date("2006"));
 
@@ -31,8 +31,8 @@ export const info = {
     name: "Ujjwal Talwar",
     subText: "Hello, I am",
     summary: [
-      `I'm a software engineer based in New Delhi, India. With ${yearsOfSoftwareDevelopmentExperience} years of software development experience and ${yearsOfItExperience} years in IT, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.`,
-      "I've created pragmatic solutions to numerous complex problems, prioritizing scalability and engineering efficiency. Currently, I'm improving data integrity in Tempus AI's DNA sequencing pipeline, streamlining complex data processing.",
+      `I'm a software engineer based in New Delhi, India. With ${yearsOfSoftwareDevelopmentExperience} years of software development experience, I can readily excel in any environment. My diverse background spans multiple disciplines like software engineering, cybersecurity and design.`,
+      // "I've created pragmatic solutions to numerous complex problems, prioritizing scalability and engineering efficiency. Currently, I'm improving data integrity in Tempus AI's DNA sequencing pipeline, streamlining complex data processing.",
       "My commitment to continuous learning and growth empowers me to tackle increasingly challenging issues and deliver high-impact solutions.",
     ],
   },
