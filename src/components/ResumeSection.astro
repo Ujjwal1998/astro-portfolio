@@ -14,25 +14,29 @@ const { title, details } = Astro.props;
         details.map((item) => (
           <div class="my-4">
             <div class="flex flex-wrap items-start justify-between">
-              <div>
+              <div class="">
                 <h3 class="text-xl font-semibold">{item.title}</h3>
                 <h3 class="text-xl font-semibold">{item.name}</h3>
               </div>
               <div>
-                <p class="dark:text-light mt-[0.3125rem] text-sm">
-                  {item.startDate} – {item.endDate}
-                </p>
+                {item.startDate && item.endData && (
+                  <p class="dark:text-light mt-[0.3125rem] text-sm">
+                    {item.startDate} – {item.endDate}
+                  </p>
+                )}
                 <p class="dark:text-light mt-3 text-sm">{item.location}</p>
               </div>
             </div>
             <ul class="mt-3 ml-6 xl:ml-0">
               {item.description.map((point, idx) => {
                 return (
-                  <li
-                    class={`dark:text-light mb-2 list-disc ${idx === item.description.length - 1 && title === "Experience" ? "underline" : ""}`}
-                  >
-                    <div>{point}</div>
-                  </li>
+                  item.description.length > 1 && (
+                    <li
+                      class={`dark:text-light mb-2 list-disc ${idx === item.description.length - 1 && title === "Experience" ? "underline" : ""}`}
+                    >
+                      <div>{point}</div>
+                    </li>
+                  )
                 );
               })}
             </ul>

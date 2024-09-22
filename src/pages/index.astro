@@ -5,6 +5,7 @@ import { info } from "../data/info";
 import Header from "../components/general/Header.astro";
 import Hero from "../components/Hero.astro";
 import ResumeSection from "../components/ResumeSection.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
 ---
 
 <!doctype html>
@@ -18,6 +19,10 @@ import ResumeSection from "../components/ResumeSection.astro";
         <ResumeSection title="Education" details={info.education} />
         <ResumeSection title="Certifications" details={info.certifications} />
       </section>
+      <!-- <section>
+        <h2 class="mt-4 w-[15rem] dark:text-light">Projects</h2>
+        <ProjectsSection />
+      </section> -->
     </Layout>
   </body>
 </html>
